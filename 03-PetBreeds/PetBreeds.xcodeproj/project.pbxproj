@@ -6,20 +6,38 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BF541E792CBC16BA00AD3CE8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BF541E782CBC16BA00AD3CE8 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		BF541DE02CB3418C00AD3CE8 /* ImageClassifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageClassifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF541E5E2CBC167500AD3CE8 /* PetBreeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetBreeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF541E782CBC16BA00AD3CE8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BF541E922CBC194C00AD3CE8 /* Exceptions for "PetBreeds" folder in "PetBreeds" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BF541E5D2CBC167500AD3CE8 /* PetBreeds */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		BF541DE22CB3418C00AD3CE8 /* ImageClassifier */ = {
+		BF541E602CBC167500AD3CE8 /* PetBreeds */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ImageClassifier;
+			exceptions = (
+				BF541E922CBC194C00AD3CE8 /* Exceptions for "PetBreeds" folder in "PetBreeds" target */,
+			);
+			path = PetBreeds;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BF541DDD2CB3418C00AD3CE8 /* Frameworks */ = {
+		BF541E5B2CBC167500AD3CE8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +47,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BF541DD72CB3418C00AD3CE8 = {
+		BF541E552CBC167500AD3CE8 = {
 			isa = PBXGroup;
 			children = (
-				BF541DE22CB3418C00AD3CE8 /* ImageClassifier */,
-				BF541DE12CB3418C00AD3CE8 /* Products */,
+				BF541E782CBC16BA00AD3CE8 /* README.md */,
+				BF541E602CBC167500AD3CE8 /* PetBreeds */,
+				BF541E5F2CBC167500AD3CE8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BF541DE12CB3418C00AD3CE8 /* Products */ = {
+		BF541E5F2CBC167500AD3CE8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF541DE02CB3418C00AD3CE8 /* ImageClassifier.app */,
+				BF541E5E2CBC167500AD3CE8 /* PetBreeds.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,74 +67,75 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF541DDF2CB3418C00AD3CE8 /* ImageClassifier */ = {
+		BF541E5D2CBC167500AD3CE8 /* PetBreeds */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF541DEE2CB3418D00AD3CE8 /* Build configuration list for PBXNativeTarget "ImageClassifier" */;
+			buildConfigurationList = BF541E6C2CBC167600AD3CE8 /* Build configuration list for PBXNativeTarget "PetBreeds" */;
 			buildPhases = (
-				BF541DDC2CB3418C00AD3CE8 /* Sources */,
-				BF541DDD2CB3418C00AD3CE8 /* Frameworks */,
-				BF541DDE2CB3418C00AD3CE8 /* Resources */,
+				BF541E5A2CBC167500AD3CE8 /* Sources */,
+				BF541E5B2CBC167500AD3CE8 /* Frameworks */,
+				BF541E5C2CBC167500AD3CE8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				BF541DE22CB3418C00AD3CE8 /* ImageClassifier */,
+				BF541E602CBC167500AD3CE8 /* PetBreeds */,
 			);
-			name = ImageClassifier;
+			name = PetBreeds;
 			packageProductDependencies = (
 			);
-			productName = ImageClassifier;
-			productReference = BF541DE02CB3418C00AD3CE8 /* ImageClassifier.app */;
+			productName = PetBreeds;
+			productReference = BF541E5E2CBC167500AD3CE8 /* PetBreeds.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BF541DD82CB3418C00AD3CE8 /* Project object */ = {
+		BF541E562CBC167500AD3CE8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					BF541DDF2CB3418C00AD3CE8 = {
+					BF541E5D2CBC167500AD3CE8 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
-			buildConfigurationList = BF541DDB2CB3418C00AD3CE8 /* Build configuration list for PBXProject "ImageClassifier" */;
+			buildConfigurationList = BF541E592CBC167500AD3CE8 /* Build configuration list for PBXProject "PetBreeds" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = BF541DD72CB3418C00AD3CE8;
+			mainGroup = BF541E552CBC167500AD3CE8;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = BF541DE12CB3418C00AD3CE8 /* Products */;
+			productRefGroup = BF541E5F2CBC167500AD3CE8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BF541DDF2CB3418C00AD3CE8 /* ImageClassifier */,
+				BF541E5D2CBC167500AD3CE8 /* PetBreeds */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BF541DDE2CB3418C00AD3CE8 /* Resources */ = {
+		BF541E5C2CBC167500AD3CE8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF541E792CBC16BA00AD3CE8 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BF541DDC2CB3418C00AD3CE8 /* Sources */ = {
+		BF541E5A2CBC167500AD3CE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +145,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		BF541DEC2CB3418D00AD3CE8 /* Debug */ = {
+		BF541E6A2CBC167600AD3CE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -188,7 +208,7 @@
 			};
 			name = Debug;
 		};
-		BF541DED2CB3418D00AD3CE8 /* Release */ = {
+		BF541E6B2CBC167600AD3CE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,20 +264,20 @@
 			};
 			name = Release;
 		};
-		BF541DEF2CB3418D00AD3CE8 /* Debug */ = {
+		BF541E6D2CBC167600AD3CE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ImageClassifier/Preview Content\"";
-				DEVELOPMENT_TEAM = QQZC6282Z3;
+				DEVELOPMENT_ASSET_PATHS = "\"PetBreeds/Preview Content\"";
+				DEVELOPMENT_TEAM = 7FMM3Q538Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PetBreeds/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -265,7 +285,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = buentigre.ImageClassifier;
+				PRODUCT_BUNDLE_IDENTIFIER = buentigre.PetBreeds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -273,20 +293,20 @@
 			};
 			name = Debug;
 		};
-		BF541DF02CB3418D00AD3CE8 /* Release */ = {
+		BF541E6E2CBC167600AD3CE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ImageClassifier/Preview Content\"";
-				DEVELOPMENT_TEAM = QQZC6282Z3;
+				DEVELOPMENT_ASSET_PATHS = "\"PetBreeds/Preview Content\"";
+				DEVELOPMENT_TEAM = 7FMM3Q538Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PetBreeds/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -294,7 +314,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = buentigre.ImageClassifier;
+				PRODUCT_BUNDLE_IDENTIFIER = buentigre.PetBreeds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -305,25 +325,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF541DDB2CB3418C00AD3CE8 /* Build configuration list for PBXProject "ImageClassifier" */ = {
+		BF541E592CBC167500AD3CE8 /* Build configuration list for PBXProject "PetBreeds" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BF541DEC2CB3418D00AD3CE8 /* Debug */,
-				BF541DED2CB3418D00AD3CE8 /* Release */,
+				BF541E6A2CBC167600AD3CE8 /* Debug */,
+				BF541E6B2CBC167600AD3CE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF541DEE2CB3418D00AD3CE8 /* Build configuration list for PBXNativeTarget "ImageClassifier" */ = {
+		BF541E6C2CBC167600AD3CE8 /* Build configuration list for PBXNativeTarget "PetBreeds" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BF541DEF2CB3418D00AD3CE8 /* Debug */,
-				BF541DF02CB3418D00AD3CE8 /* Release */,
+				BF541E6D2CBC167600AD3CE8 /* Debug */,
+				BF541E6E2CBC167600AD3CE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BF541DD82CB3418C00AD3CE8 /* Project object */;
+	rootObject = BF541E562CBC167500AD3CE8 /* Project object */;
 }
