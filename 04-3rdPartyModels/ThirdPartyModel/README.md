@@ -11,7 +11,8 @@ https://drive.google.com/file/d/1aRvfAzUrqBdAotW4ZyqMVdR-ePqVSyR8/view?usp=shari
 Models:
 *) yolov8x-cls-full-300: original model
 model.export(format="coreml", nms=True, imgsz=300, optimize=True)
+https://drive.google.com/file/d/1DroycTsjfB-co1-3a1MvdjcKaG2nh3J1/view?usp=sharing
 
 *) yolov8x-cls-int8-300: model compressed by quantization technique: form Float16 to Int8
 model.export(format="coreml", nms=True, imgsz=300, int8=True, optimize=True)
-
+https://drive.google.com/file/d/110FQ0hDh0sYRQxOSl2nGDymLoiezMwrl/view?usp=sharing
