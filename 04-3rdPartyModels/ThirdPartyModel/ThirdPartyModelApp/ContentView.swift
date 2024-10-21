@@ -10,12 +10,21 @@ import PhotosUI
 
 struct ContentView: View {
 	@StateObject var viewModel: ImageViewModel
+	@State private var currentModel: ModelType = .full
 
 	var body: some View {
 		VStack {
 			if let image = viewModel.photoPickerViewModel.selectedPhoto?.image {
 				Spacer()
 					.frame(height: 10)
+				Picker("Select model", selection: $currentModel) {
+					Text("yolov8x-cls full").tag(ModelType.full)
+					Text("yolov8x-cls quantified").tag(ModelType.quantified)
+				}
+				.onChange(of: currentModel) {
+					viewModel.changeModel(to: currentModel)
+					viewModel.classifyImage()
+				}
 				Image(uiImage: image)
 					.resizable()
 					.aspectRatio(contentMode: .fit)
@@ -30,8 +39,12 @@ struct ContentView: View {
 				} else {
 					if !Utils.isSimulator() {
 						VStack {
-							Spacer()
 							if let classification = viewModel.classification, let conficence = viewModel.confidence {
+								if let time = viewModel.elapsedTime {
+									Text("Evaluation time: \(time) s.")
+										.foregroundStyle(.cyan)
+								}
+								Spacer()
 								if viewModel.lowConfidenceWarning {
 									Text("It'm not sure what kind photo it is, maybe it's a \(classification)?")
 										.font(.title2)
@@ -45,6 +58,7 @@ struct ContentView: View {
 										.font(.caption)
 								}
 							} else {
+								Spacer()
 								Button("Start image classification") {
 									viewModel.classifyImage()
 								}

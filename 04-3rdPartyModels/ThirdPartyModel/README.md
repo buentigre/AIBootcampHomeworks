@@ -6,15 +6,12 @@ WARNING:
 Please note that this app needs to be run on real iPhone device with minimum version of iOS 18.0.
 
 Video walkthrough:
+https://drive.google.com/file/d/1aRvfAzUrqBdAotW4ZyqMVdR-ePqVSyR8/view?usp=sharing
 
+Models:
+*) yolov8x-cls-full-300: original model
+model.export(format="coreml", nms=True, imgsz=300, optimize=True)
 
-TODO:
-add processing time
-switch to compressed and non compresed model
-
-(option) Resnet 50 + compression
-https://www.kodeco.com/ios/programs/apple-intelligence/third-party-ai/45463483-3rd-party-on-device-models/02-converting-models-with-core-ml-tools/04
-
-is there more efficient compression then I did?
-what the difference between YOLO and Resnet50 compression
+*) yolov8x-cls-int8-300: model compressed by quantization technique: form Float16 to Int8
+model.export(format="coreml", nms=True, imgsz=300, int8=True, optimize=True)
 

@@ -13,12 +13,19 @@ class ImageViewModel: ObservableObject {
 	@Published var errorMessage: String?
 	@Published var classification: String?
 	@Published var confidence: String?
+	@Published var elapsedTime: String?
 	@Published var lowConfidenceWarning: Bool = false
 
-	private let classifier = ImageClassifier()
+	// Init with full model, model can be changed later via changeModel routine.
+	private let classifier = ImageClassifier(modelType: .full)
 
 	init(photoPickerViewModel: PhotoPickerViewModel) {
 		self.photoPickerViewModel = photoPickerViewModel
+	}
+
+	@MainActor
+	func changeModel(to model: ModelType) {
+		classifier.changeModel(modelType: model)
 	}
 
 	@MainActor
@@ -26,6 +33,7 @@ class ImageViewModel: ObservableObject {
 		self.errorMessage = nil
 		self.classification = nil
 		self.confidence = nil
+		self.elapsedTime = nil
 		self.photoPickerViewModel.selectedPhoto = nil
 	}
 
@@ -43,10 +51,13 @@ class ImageViewModel: ObservableObject {
 
 		let resizedImage = resizeImage(image)
 		DispatchQueue.global(qos: .userInteractive).async {
-			self.classifier.classify(image: resizedImage ?? image) { [weak self] breedName, confidence in
+			self.classifier.classify(image: resizedImage ?? image) { [weak self] classification, confidence, time in
 				DispatchQueue.main.async { [weak self] in
-					self?.classification = breedName
+					self?.classification = classification
 					self?.confidence = String(format: "%.0f%%", (confidence ?? 0) * 100.0)
+					if let time = time {
+						self?.elapsedTime = String(format: "%.2f", time)
+					}
 					self?.lowConfidenceWarning = (confidence ?? 0) < 0.75 ? true : false
 				}
 			}

@@ -26,6 +26,7 @@ struct ThirdPartyModelApp: App {
 								photoLibrary: .shared()) {
 								Image(systemName: "photo.badge.plus")
 									.imageScale(.large)
+									.tint(.blue)
 							}
 							.simultaneousGesture(TapGesture()
 								.onEnded({
