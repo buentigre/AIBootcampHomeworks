@@ -9,7 +9,7 @@ import SwiftUI
 import PhotosUI
 
 struct ContentView: View {
-	@StateObject var viewModel: ImageViewModel
+	@StateObject var viewModel: PetImageViewModel
 
 	var body: some View {
 		VStack {
@@ -31,10 +31,26 @@ struct ContentView: View {
 					if !Utils.isSimulator() {
 						VStack {
 							Spacer()
-							Text("Breed: name")
-								.padding()
-							Text("Accuracy: 0.0%")
-								.padding()
+							if let breed = viewModel.breedName, let conficence = viewModel.confidence {
+								if viewModel.lowConfidenceWarning {
+									Text("It'm not sure what kind of pet it is, maybe a \(breed)?")
+										.font(.title2)
+										.multilineTextAlignment(.center)
+									Text("I'm just \(conficence) sure :(")
+										.font(.caption)
+								} else {
+									Text("It's a \(breed)!")
+										.font(.largeTitle)
+									Text("I'm \(conficence) sure.")
+										.font(.caption)
+								}
+							} else {
+								Button("Start pet breed detection") {
+									viewModel.classifyImage()
+								}
+								.buttonStyle(.bordered)
+								.tint(.green)
+							}
 							Spacer()
 							Text("Select a new photo to see another pet breed detection.")
 								.foregroundColor(.gray)
@@ -58,7 +74,7 @@ struct ContentView: View {
 		}
 		.padding()
 		.onReceive(NotificationCenter.default.publisher(for: Notification.Name.photoSelected)) { _ in
-			// TODO: clear pet breed detection here, and maybe start new detection
+			viewModel.resetDetectionImage()
 		}
 	}
 }

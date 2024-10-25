@@ -16,7 +16,7 @@ struct PetBreedsApp: App {
 	var body: some Scene {
 		WindowGroup {
 			NavigationView {
-				ContentView(viewModel: ImageViewModel(photoPickerViewModel: photoPickerViewModel))
+				ContentView(viewModel: PetImageViewModel(photoPickerViewModel: photoPickerViewModel))
 					.navigationTitle("Pet Breeds")
 					.toolbar {
 						ToolbarItem(placement: .navigationBarTrailing) {
