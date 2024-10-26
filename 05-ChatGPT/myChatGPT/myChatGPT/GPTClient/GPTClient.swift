@@ -12,7 +12,7 @@ class GPTClient {
 	var model: GPTModelVersion
 	var context: [GPTMessage]
 
-	private let apiKey = "PASTE YOUR OPENAI API KEY HERE"
+	private let apiKey = "...your API key here..."
 	private let encoder: JSONEncoder
 	private let decoder: JSONDecoder
 	private let urlSession: URLSession
