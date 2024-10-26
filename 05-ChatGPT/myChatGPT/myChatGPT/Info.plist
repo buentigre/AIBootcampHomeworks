@@ -5,9 +5,11 @@
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIImageName</key>
-		<string>SplashIcon2</string>
+		<string>AppIcon180</string>
 		<key>UIColorName</key>
 		<string>AccentColor</string>
+		<key>UILaunchScreen</key>
+		<dict/>
 	</dict>
 </dict>
 </plist>
