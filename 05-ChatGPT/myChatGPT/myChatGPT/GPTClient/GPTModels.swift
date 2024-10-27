@@ -59,7 +59,8 @@ enum GPTClientError: Error, CustomStringConvertible {
 	var description: String {
 		switch self {
 			case .errorResponse(let statusCode, let error):
-				return "GPTClientError.errorResponse: statusCode: \(statusCode), " +
+				// let extraInfo: String? = error?.error.code
+				return "GPTClientError.errorResponse: statusCode: \(statusCode)," +
 				"error: \(String(describing: error))"
 
 			case .networkError(let message, let error):
